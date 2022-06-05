@@ -3,6 +3,11 @@
   border-top-right-radius: 0.5rem;
 }
 
+.landing-page-icon {
+  height: 80px;
+  width: auto;
+}
+
 @media (min-width: 992px) {
   .rounded-tr-lg-0 {
     border-top-right-radius: 0;
