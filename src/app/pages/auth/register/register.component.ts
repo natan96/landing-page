@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
       this.usedCrm = await this._user.crmUsed(value.crm);
       if (this.usedEmail || this.usedCrm) {
         if (this.usedEmail) {
-          this.toastr.warning('Email já cadastrado! Tente outro');
+          this.toastr.warning('E-mail já cadastrado! Tente outro');
         }
         if (this.usedCrm) {
           this.toastr.warning('CRM já cadastrado! Tente outro');
