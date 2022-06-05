@@ -1,0 +1,64 @@
+
+<div class="row justify-content-center m-0">
+  <div class="col-md-9 mt-4 px-0">
+    <section class="text-center text-lg-start">
+      <div class="card mb-3">
+        <div class="row g-0 d-flex align-items-center">
+          <div class="col-lg-5 d-none d-lg-flex">
+            <img src="../../../../assets/images/login.jpg" alt="Trendy Pants and Shoes"
+              class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+          </div>
+          <div class="col-lg-7">
+
+            <h2 class="text-center mt-5">Landing Page Login</h2>
+
+            <div class="card-body py-5 px-md-5">
+
+              <form [formGroup]="formGroup" novalidate (ngSubmit)="onSubmit()">
+                <div class="form-floating mb-4">
+                  <input
+                    type="text"
+                    id="lbEmail"
+                    formControlName="email"
+                    class="form-control"
+                    placeholder="E-mail"
+                    [class.is-invalid]="submitted && f['email'].invalid"
+                  />
+                  <label class="form-label" for="lbEmail">E-mail</label>
+                </div>
+
+                <div class="form-floating mb-4">
+                  <input
+                    type="password"
+                    id="lbPassword"
+                    formControlName="password"
+                    class="form-control"
+                    placeholder="Senha"
+                    [class.is-invalid]="submitted && f['password'].invalid"
+                  />
+                  <label class="form-label" for="lbPassword">Senha</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 text-center mb-4">
+                    <span>
+                      Não possui uma conta? <a [routerLink]="['/auth/register']">Cadastre-se aqui</a>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary mb-4" [disabled]="submitting">
+                    <span class="spinner-grow spinner-grow-sm mr-1 mt-1" *ngIf="submitting"></span>
+                    Entrar
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

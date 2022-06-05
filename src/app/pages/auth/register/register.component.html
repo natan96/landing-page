@@ -1,0 +1,117 @@
+<div class="row justify-content-center m-0">
+  <div class="col-md-10">
+    <section class="text-center text-lg-start">
+
+      <div class="container py-4">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <div class="card cascading-right" style="
+                background: hsla(0, 0%, 100%, 0.55);
+                backdrop-filter: blur(30px);
+                ">
+              <div class="card-body p-md-5 shadow-5 text-center">
+                <h2 class="fw-bold mb-5">Cadastro</h2>
+                <form [formGroup]="formGroup" novalidate (ngSubmit)="onSubmit()">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="text"
+                      formControlName="name"
+                      id="lbName"
+                      class="form-control"
+                      placeholder="Nome"
+                      [class.is-invalid]="submitted && f['name'].invalid"
+                    />
+                    <label class="form-label" for="lbName">Nome</label>
+                  </div>
+
+                  <div class="form-floating mb-4">
+                    <input
+                      type="email"
+                      formControlName="email"
+                      id="lbEmail"
+                      class="form-control"
+                      placeholder="E-mail"
+                      [class.is-invalid]="submitted && (f['email'].invalid || usedEmail)"
+                    />
+                    <label class="form-label" for="lbEmail">E-mail</label>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-5 mb-4">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          formControlName="crm"
+                          id="lbCrm"
+                          class="form-control"
+                          placeholder="CRM"
+                          [class.is-invalid]="submitted && (f['crm'].invalid || usedCrm)"
+                        />
+                        <label class="form-label" for="lbCrm">CRM</label>
+                      </div>
+                    </div>
+                    <div class="col-md-7 mb-4">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          formControlName="phone"
+                          id="lbPhone"
+                          class="form-control"
+                          placeholder="Telefone"
+                          mask="(00) 0000-0000||(00) 00000-0000"
+                          [class.is-invalid]="submitted && f['phone'].invalid"
+                        />
+                        <label class="form-label" for="lbPhone">Telefone/Celular</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-floating mb-4">
+                    <input
+                      type="password"
+                      formControlName="password"
+                      id="lbPassword"
+                      class="form-control"
+                      placeholder="Senha"
+                      [class.is-invalid]="submitted && (f['password'].invalid || invalidPasswords)"
+                    />
+                    <label class="form-label" for="lbPassword">Senha</label>
+                    <div class="invalid-feedback" *ngIf="f['password'].errors?.['minlength']">
+                      A senha deve conter 3 caracteres ou mais
+                    </div>
+                  </div>
+                  <div class="form-floating mb-4">
+                    <input
+                      type="password"
+                      formControlName="confirmPassword"
+                      id="lbConfirmPassword"
+                      class="form-control"
+                      placeholder="Senha"
+                      [class.is-invalid]="submitted && (f['confirmPassword'].invalid || invalidPasswords)"
+                    />
+                    <label class="form-label" for="lbConfirmPassword">Confirma senha</label>
+                  </div>
+
+                  <div class="d-grid gap-2">
+                    <button
+                      type="submit" class="btn btn-primary mb-4" [disabled]="submitting">
+                      <span class="spinner-grow spinner-grow-sm mr-1 mt-1" *ngIf="submitting"></span>
+                      Cadastrar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 mb-5 d-mobile-none mb-lg-0">
+            <img src="../../../../assets/images/register.jpg" class="w-100 rounded-4 shadow-4 rounded-3"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+

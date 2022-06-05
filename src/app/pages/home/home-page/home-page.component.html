@@ -1,0 +1,50 @@
+<nav class="navbar navbar-dark bg-primary container-fluid mb-2 px-lg-5">
+  <div class="row justify-content-start">
+    <h3 class="text-white"><i class="bi bi-house-door-fill me-1"></i>Home Landing Page</h3>
+  </div>
+  <div class="d-flex justify-content-end align-items-center">
+    <h3 class="text-white">
+      <i class="bi bi-person-circle me-2"></i>
+    </h3>
+    <a (click)="logout()">
+      <h6 class="text-white cursor-pointer">
+        <i class="bi bi-box-arrow-right"></i>
+        Sair
+      </h6>
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h3 class="text-center mt-2">
+        Bem vindo(a)
+        <span class="text-uppercase text-primary" *ngIf="user">
+          {{ user.name }}
+        </span>
+      </h3>
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/C_6hBFmrgn4?rel=0"
+          title="Vamos começar"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+    </div>
+    <div class="col-md-8">
+      <p class="mt-4">
+        Atenção! No Congresso Nacional, tramita a MP nº 890/2019,
+        que cria o programa Médicos pelo Brasil. Contudo, emendas
+        que distorceram a proposta precisam ser derrubadas pelos
+        parlamentares. É preciso exigir que portadores de diplomas
+        de Medicina obtidos no exterior passem pelo Revalida,
+        aplicado por escola pública, antes de começar a atuar no País.
+        Médicos e população estão unidos para garantir qualidade na assistência.
+        Afinal, saúde é coisa séria. No Brasil, médico só com registro no CRM.
+      </p>
+    </div>
+  </div>
+</div>
