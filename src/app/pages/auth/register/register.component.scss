@@ -7,14 +7,11 @@
   width: auto;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   .cascading-right {
     margin-right: 0;
   }
-}
-
-@media (max-width: 575px) {
-  .d-mobile-none {
+  .d-cascading-none {
     display: none;
   }
 }
