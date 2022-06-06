@@ -1,23 +1,23 @@
-<nav class="navbar navbar-dark bg-primary container-fluid mb-2 px-lg-5">
-  <div class="row justify-content-start">
-    <h3 class="text-white"><i class="bi bi-house-door-fill me-1"></i>Home Landing Page</h3>
-  </div>
-  <div class="d-flex justify-content-end align-items-center">
-    <h3 class="text-white">
-      <i class="bi bi-person-circle me-2"></i>
-    </h3>
-    <a (click)="logout()">
-      <h6 class="text-white cursor-pointer">
-        <i class="bi bi-box-arrow-right"></i>
-        Sair
-      </h6>
-    </a>
-  </div>
-</nav>
+<div class="container-fluid d-flex flex-column min-vh-100 p-0 m-0">
+  <nav class="navbar navbar-dark bg-primary container-fluid mb-2 px-lg-5">
+    <div class="row justify-content-start">
+      <h4 class="text-white"><i class="bi bi-house-door-fill me-1"></i>Home Landing Page</h4>
+    </div>
+    <div class="d-flex justify-content-end align-items-center">
+      <h3 class="text-white">
+        <i class="bi bi-person-circle me-2"></i>
+      </h3>
+      <a (click)="logout()">
+        <h6 class="text-white cursor-pointer">
+          <i class="bi bi-box-arrow-right"></i>
+          Sair
+        </h6>
+      </a>
+    </div>
+  </nav>
 
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
+  <div class="row gx-0 justify-content-center">
+    <div class="col-md-6 px-5 px-md-4">
       <h3 class="text-center mt-2">
         Bem vindo(a)
         <span class="text-uppercase text-primary" *ngIf="user">
@@ -34,7 +34,7 @@
       </div>
 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 px-4">
       <p class="mt-4">
         Atenção! No Congresso Nacional, tramita a MP nº 890/2019,
         que cria o programa Médicos pelo Brasil. Contudo, emendas
@@ -47,4 +47,18 @@
       </p>
     </div>
   </div>
+
+  <footer class="text-center text-lg-start bg-primary text-muted mt-auto">
+      <div class="text-center text-white p-4">
+      © {{ currentDate.getFullYear() }} Copyright:
+      <a
+        class="text-reset fw-bold text-decoration-none"
+        href="https://github.com/natan96/"
+      >
+        <i class="bi bi-github"></i>
+        Natan
+      </a>
+    </div>
+  </footer>
+
 </div>

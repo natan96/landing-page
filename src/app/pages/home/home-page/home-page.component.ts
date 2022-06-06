@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 export class HomePageComponent implements OnInit {
 
   user: User | null = null;
+  currentDate = new Date();
 
   constructor(private router: Router, private _auth: AuthService) { }
 
